@@ -84,24 +84,17 @@ animatedElements.forEach(el => {
     observer.observe(el);
 });
 
-// Add typing effect to hero title (optional)
+// Fade in hero title
 const heroTitle = document.querySelector('.hero-title');
 if (heroTitle) {
-    const text = heroTitle.innerHTML;
-    heroTitle.innerHTML = '';
-    heroTitle.style.opacity = '1';
+    heroTitle.style.opacity = '0';
+    heroTitle.style.transform = 'translateY(20px)';
+    heroTitle.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     
-    let i = 0;
-    function typeWriter() {
-        if (i < text.length) {
-            heroTitle.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
-    }
-    
-    // Start typing after a short delay
-    setTimeout(typeWriter, 300);
+    setTimeout(() => {
+        heroTitle.style.opacity = '1';
+        heroTitle.style.transform = 'translateY(0)';
+    }, 100);
 }
 
 // Dynamic year in footer
