@@ -537,6 +537,24 @@ section {
     color: var(--text-primary);
 }
 
+/* LinkedIn Icon */
+.linkedin-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #0A66C2;
+    transition: color 0.3s;
+}
+
+.contact-card:hover .linkedin-icon svg {
+    color: var(--primary-color);
+}
+
 /* Footer */
 .footer {
     background: var(--darker-bg);
