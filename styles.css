@@ -555,6 +555,24 @@ section {
     color: var(--primary-color);
 }
 
+/* GitHub Icon */
+.github-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #f1f5f9;
+    transition: color 0.3s;
+}
+
+.contact-card:hover .github-icon svg {
+    color: var(--primary-color);
+}
+
 /* Footer */
 .footer {
     background: var(--darker-bg);
